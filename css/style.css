@@ -1,0 +1,20 @@
+/* my library> */
+.display-grid{
+    display: grid;
+}
+/* <my library */
+
+.main-wrapper{
+    grid-template-columns: 20% 55% 25%;
+    min-height: 100vh;
+    place-items: stretch;
+}
+.main-wrapper > .user-navigation{
+    background-color: green;
+}
+.main-wrapper > .main-stream{
+    background-color: red;
+}
+.main-wrapper > .bmi-section{
+    background-color: yellow;
+}
