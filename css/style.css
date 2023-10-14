@@ -2,19 +2,150 @@
 .display-grid{
     display: grid;
 }
+.display-flex{
+    display: flex;
+}
+.flex-direction-column{
+    flex-direction: column;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-space-between{
+    justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
+}
+.width-100{
+    width: 100%;
+}
+.border-radius-5{
+    border-radius: 5px;
+}
+.border-radius-10{
+    border-radius: 10px;
+}
 /* <my library */
 
+/* for common tags>*/
+.delete-button{
+    position: relative;
+    height: 100%;
+    width: 30px;
+    background-color: inherit;
+    cursor: pointer;
+}
+.delete-button .delete-button-line{
+    position: absolute;
+    top: 0;
+    left: 44%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 5px;
+    background-color: red;
+    border-radius: 3px;
+}
+.delete-button .delete-button-line:nth-child(1){
+    transform: rotate(45deg);
+}
+.delete-button .delete-button-line:nth-child(2){
+    transform: rotate(-45deg);
+}
+/* <for common tags*/
+body{
+    position: relative;
+}
 .main-wrapper{
-    grid-template-columns: 20% 55% 25%;
-    min-height: 100vh;
+    grid-template-columns: 20% 55% 25%; 
     place-items: stretch;
 }
 .main-wrapper > .user-navigation{
-    background-color: green;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    /* background-image: linear-gradient(to bottom right, #42d3d6, #42d693); */
+    background-color: rgba(36, 96, 179, 0.933);
+    padding: 10px 0;
 }
+/* .main-wrapper > .user-navigation::-webkit-scrollbar{
+    width: 12px;
+    background-color: rgb(176, 184, 192);
+    border-radius: 5px;
+}
+.main-wrapper > .user-navigation::-webkit-scrollbar-thumb{
+    background-color: rgb(113, 122, 130);
+    border-radius: 5px;
+} */
+
+.main-wrapper > .user-navigation > .user-navigation-inner-wrapper{
+    width: 93%;
+    row-gap: 2%;
+}
+.main-wrapper > .user-navigation > .user-navigation-inner-wrapper > .user-add-section {
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 0.5em;
+    height: 45px;
+}
+.user-add-section input{
+    text-align: center;
+    border: 2px solid white;
+    width: 100%;
+}
+.user-add-section button{
+    cursor: pointer;
+    background-image: url('../images/user-navigation-images/plus-image.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.main-wrapper > .user-navigation > .user-navigation-inner-wrapper > .users-list{
+    height: 100%;
+    padding: 10px 0;
+    row-gap: 1%;
+    background-color: inherit;
+    overflow-y:scroll;
+    scroll-behavior: smooth;
+}
+.user-navigation-inner-wrapper > .users-list::-webkit-scrollbar{
+    width: 10px;
+    padding: 2px;
+    background-color: inherit;
+}
+.main-wrapper > .user-navigation > .user-navigation-inner-wrapper > .users-list::-webkit-scrollbar-thumb{
+    background-color: rgb(113, 122, 130);
+    border-radius: 4px;
+}
+.user-navigation-inner-wrapper > .users-list .user{
+    width: 95%;
+    padding: 8px 10px;
+    background-color: green;
+    border-radius: 5px;
+}
+.user-navigation-inner-wrapper > .users-list .user .user-brief-info{
+    max-width: 80%;
+}
+.user-navigation-inner-wrapper > .users-list .user .user-brief-info h2{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.about-section{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
 .main-wrapper > .main-stream{
     background-color: red;
 }
 .main-wrapper > .bmi-section{
+    position: sticky;
+    top: 0;
+    height: 100vh;
     background-color: yellow;
 }
