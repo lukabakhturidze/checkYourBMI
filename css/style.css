@@ -1,9 +1,19 @@
+:root{
+    --green: #009B4D;
+    --yellow: #FFCC00;
+    --ivory: #FAF5E9;
+    --primary-dark: #141414cc;
+}
+
 /* my library> */
 .display-grid{
     display: grid;
 }
 .display-flex{
     display: flex;
+}
+.display-none{
+    display: none;
 }
 .flex-direction-column{
     flex-direction: column;
@@ -43,7 +53,7 @@
     transform: translateX(-50%);
     height: 100%;
     width: 5px;
-    background-color: red;
+    background-color: var(--green);
     border-radius: 3px;
 }
 .delete-button .delete-button-line:nth-child(1){
@@ -51,6 +61,38 @@
 }
 .delete-button .delete-button-line:nth-child(2){
     transform: rotate(-45deg);
+}
+.c-yellow{
+    color: var(--yellow);
+}
+.c-ivory{
+    color: var(--ivory);
+}
+.c-green{
+    color: var(--green);
+}
+.bc-yellow{
+    background-color: var(--yellow);
+}
+.bc-ivory{
+    background-color: var(--ivory);
+}
+.bc-green{
+    background-color: var(--green);
+}
+
+.smaller-text-size{
+    font-size: 14px;
+    font-weight:200;
+    font-family: 'young-serif-400';
+    /* text-shadow: 1px 1px 2px var(--primary-dark); */
+}
+
+.standard-text-size{
+    font-size: 16px;
+    font-weight:400;
+    font-family: 'young-serif-400';
+    text-shadow: 2px 2px 3px var(--primary-dark);
 }
 /* <for common tags*/
 body{
@@ -64,20 +106,9 @@ body{
     position: sticky;
     top: 0;
     height: 100vh;
-    /* background-image: linear-gradient(to bottom right, #42d3d6, #42d693); */
-    background-color: rgba(36, 96, 179, 0.933);
+    background-image: linear-gradient(to bottom right, var(--yellow), var(--green));
     padding: 10px 0;
 }
-/* .main-wrapper > .user-navigation::-webkit-scrollbar{
-    width: 12px;
-    background-color: rgb(176, 184, 192);
-    border-radius: 5px;
-}
-.main-wrapper > .user-navigation::-webkit-scrollbar-thumb{
-    background-color: rgb(113, 122, 130);
-    border-radius: 5px;
-} */
-
 .main-wrapper > .user-navigation > .user-navigation-inner-wrapper{
     width: 93%;
     row-gap: 2%;
@@ -91,6 +122,11 @@ body{
     text-align: center;
     border: 2px solid white;
     width: 100%;
+    background-color: var(--ivory);
+    color: var(--green);
+}
+.user-add-section input::placeholder{
+    color: var(--green);
 }
 .user-add-section button{
     cursor: pointer;
@@ -98,14 +134,22 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    background-color: var(--ivory);
+}
+.name-warning{
+    text-align: center;
+    font-size: large;
+    color: red;
 }
 .main-wrapper > .user-navigation > .user-navigation-inner-wrapper > .users-list{
     height: 100%;
-    padding: 10px 0;
+    padding: 10px 0 10px 0;
     row-gap: 1%;
     background-color: inherit;
     overflow-y:scroll;
     scroll-behavior: smooth;
+    border-top: 2px dashed black;
+    
 }
 .user-navigation-inner-wrapper > .users-list::-webkit-scrollbar{
     width: 10px;
@@ -119,8 +163,10 @@ body{
 .user-navigation-inner-wrapper > .users-list .user{
     width: 95%;
     padding: 8px 10px;
-    background-color: green;
+    background-color: var(--ivory);
+    border: 1px solid var(--green);
     border-radius: 5px;
+    /* box-shadow: 0px 1px 1px 1px var(--primary-dark); */
 }
 .user-navigation-inner-wrapper > .users-list .user .user-brief-info{
     max-width: 80%;
@@ -132,6 +178,7 @@ body{
 }
 .about-section{
     margin-bottom: 10px;
+    font-family: 'young-serif-400';
 }
 
 

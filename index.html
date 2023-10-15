@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>checkYourBMI</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
     <script defer type="module" src="./js/main.js"></script>
 </head>
 <body>
     <div class="display-grid main-wrapper">
         <div class="user-navigation display-flex justify-content-center">
-            <div class="user-navigation-inner-wrapper display-flex flex-direction-column justify-content-space-between">
+            <div class="user-navigation-inner-wrapper display-flex flex-direction-column justify-content-space-between align-items-center">
                 <form class="user-add-section width-100 display-grid">
                     <input autocomplete="userName" name="userName" type="text" class="border-radius-5" placeholder="new User">
                     <button type="submit" class="border-radius-5"></button>
                 </form>
-                <ul class="users-list display-flex flex-direction-column align-items-center">
+                <span class="name-warning display-none">name should include more than 2 symbols</span>
+                <ul class="users-list display-flex flex-direction-column align-items-center width-100">
                     <!-- <li class="user display-flex justify-content-space-between">
                         <div class="user-brief-info">
                             <h2>luka</h2>
@@ -30,7 +32,7 @@
                     </li> -->
                 </ul>
                 <div class="about-section">
-                    <h5>About Us</h5>
+                    <h5 class="standard-text-size c-ivory">About Us</h5>
                 </div>
             </div>
         </div>
