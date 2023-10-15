@@ -36,6 +36,9 @@
 .border-radius-10{
     border-radius: 10px;
 }
+.user-select{
+    user-select: none;
+}
 /* <my library */
 
 /* for common tags>*/
@@ -80,19 +83,20 @@
 .bc-green{
     background-color: var(--green);
 }
+.primary-text-shadow{
+    text-shadow: 2px 2px 3px var(--primary-dark);
+}
 
 .smaller-text-size{
     font-size: 14px;
     font-weight:200;
     font-family: 'young-serif-400';
-    /* text-shadow: 1px 1px 2px var(--primary-dark); */
 }
 
 .standard-text-size{
     font-size: 16px;
     font-weight:400;
     font-family: 'young-serif-400';
-    text-shadow: 2px 2px 3px var(--primary-dark);
 }
 /* <for common tags*/
 body{
@@ -106,7 +110,7 @@ body{
     position: sticky;
     top: 0;
     height: 100vh;
-    background-image: linear-gradient(to bottom right, var(--yellow), var(--green));
+    background-image: linear-gradient(to bottom right, var(--yellow) 30%, var(--green));
     padding: 10px 0;
 }
 .main-wrapper > .user-navigation > .user-navigation-inner-wrapper{
@@ -179,7 +183,38 @@ body{
 .about-section{
     margin-bottom: 10px;
     font-family: 'young-serif-400';
+    cursor: pointer;
 }
+.about-modal{
+    row-gap: 1em;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    width: 45%;
+    transform: translateX(-50%) translateY(100%);
+    padding: 1em;
+    background-color: var(--ivory);
+    border-radius: 1em;
+    transition: all 0.3s linear;
+    overflow: hidden;
+}
+.about-modal-animation-div{
+    transition: all 0.3s linear;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--yellow);
+}
+.about-modal-animation-div.active{
+    animation: aboutModalAnimation 0.5s linear 0.2s 1 normal forwards;
+}
+.about-modal-paragraph{
+    row-gap: 0.5em;
+}
+
+
+
 
 
 

@@ -5,6 +5,14 @@ const usersList = document.querySelector(".users-list");
 const nameWarning = document.querySelector(".name-warning");
 import {User, GlobalObj} from './oop.js'
 //1<user navigation variables
+
+//modal toggle variables>2
+const aboutSection = document.querySelector(".about-section");
+const aboutModal = document.querySelector(".about-modal");
+const aboutModalAnimationDiv = document.querySelector(".about-modal-animation-div");
+let isModalOpen = 0;
+//2<modal toggle variables
+
 //user navigation action>1
 // render handler from index>
 //user delete handler
@@ -96,9 +104,22 @@ function createUserInList(event){
     createUserOnDisplay(userObj);
     console.log(globalObj.usersArray);
 }
-
-
-
-
 //1<user navigation action
+
+//modal toggle handle>2
+aboutSection.addEventListener('click', () => {
+    if(!isModalOpen){
+        aboutModal.style.bottom = `20px`;
+        aboutModal.style.transform = `translateX(-50%) translateY(0)`;
+        aboutModalAnimationDiv.classList.add("active");
+    }
+    else if(isModalOpen){
+        aboutModal.style.bottom = `0`;
+        aboutModal.style.transform = `translateX(-50%) translateY(100%)`;
+        aboutModalAnimationDiv.classList.remove("active");
+    }
+    isModalOpen = !isModalOpen;
+})
+//2<modal toggle handle
+
 
