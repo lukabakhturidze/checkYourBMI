@@ -212,6 +212,10 @@ body{
 .about-modal-paragraph{
     row-gap: 0.5em;
 }
+.BMI-list{
+    margin-left: 15px;
+    list-style-type: decimal;
+}
 
 
 
